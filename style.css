@@ -1,11 +1,4 @@
-:root {
-    --bs-font-sans-serif: 'Rubik', sans-serif;
-  }
-  
   .container-xxl { max-width: 1530px; }
-
-  
-  
   /* Category Card */
   .category__link {
     text-align: center;
