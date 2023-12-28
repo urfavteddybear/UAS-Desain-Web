@@ -1,3 +1,6 @@
+  * {
+    font-family: Rubik;
+  }
   .container-xxl { max-width: 1530px; }
   /* Category Card */
   .category__link {
