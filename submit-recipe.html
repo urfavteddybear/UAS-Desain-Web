@@ -18,6 +18,12 @@
             var newIngredientInput = '<div class="ingredientDiv mb-2"><input type="text" name="ingredients" class="form-control"></div>';
             $(".ingredientList").append(newIngredientInput);
         })})
+        $(function(){
+          $("#submitRecipe").on("click", function() {
+          var successAlert = '<div class="col-8 alert alert-success" role="alert">Recipe has been added.</div>';
+          $(".successAlert").html(successAlert);
+          $("input, textarea, select").val('');
+        })})
     </script>
     <title>Cooking Blog - Submit Page</title>
 </head>
@@ -33,6 +39,7 @@
   </div>
   
   <div class="row justify-content-center">
+    <div class="successAlert d-flex justify-content-center"></div>
     <div class="col-8">
       <form>
         <div class="row g-3">
@@ -90,10 +97,8 @@
             <label for="image">Product Image</label>
             <input type="file" class="form-control" name="image" accept="image/*">
           </div>
-          <div class="col-12">
-            <button type="submit" class="btn btn-primary">
-                <a href="/submit-success.html" class="text-decoration-none" style="color: white;">Submit Recipe</a>
-            </button>
+          <div>
+            <button type="button" class="btn btn-primary" id="submitRecipe">Submit Recipe</button>
           </div>
         </div>
       </form>
